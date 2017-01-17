@@ -1,0 +1,2 @@
+simple_navigation_goals
+-DCATKIN_DEVEL_PREFIX=/home/gqy/Desktop/simple_navigation_goals_readtxt/devel -DCMAKE_INSTALL_PREFIX=/home/gqy/Desktop/simple_navigation_goals_readtxt/install -G Unix Makefiles

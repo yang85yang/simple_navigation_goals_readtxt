@@ -1,0 +1,53 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec1322895288/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1322895288.dir/build.make CMakeFiles/cmTryCompileExec1322895288.dir/build
+make[1]: 正在进入目录 `/home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1322895288.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec1322895288.dir/CheckSymbolExists.c.o   -c /home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec1322895288
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1322895288.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec1322895288.dir/CheckSymbolExists.c.o  -o cmTryCompileExec1322895288 -rdynamic 
+CMakeFiles/cmTryCompileExec1322895288.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x16)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+make[1]:正在离开目录 `/home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp'
+make[1]: *** [cmTryCompileExec1322895288] 错误 1
+make: *** [cmTryCompileExec1322895288/fast] 错误 2
+
+File /home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec717269583/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec717269583.dir/build.make CMakeFiles/cmTryCompileExec717269583.dir/build
+make[1]: 正在进入目录 `/home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec717269583.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec717269583.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-2.8/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec717269583
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec717269583.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec717269583.dir/CheckFunctionExists.c.o  -o cmTryCompileExec717269583 -rdynamic -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [cmTryCompileExec717269583] 错误 1
+make[1]:正在离开目录 `/home/gqy/Desktop/simple_navigation_goals_readtxt/build/CMakeFiles/CMakeTmp'
+make: *** [cmTryCompileExec717269583/fast] 错误 2
+
+
